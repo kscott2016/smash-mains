@@ -1,34 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import Character from './Character'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className='container'>
+      <div className="characterCard">
+      
+      <Character main = {{name:"Princess Peach", charImg:"https://www.smashbros.com/assets_v2/img/fighter/peach/ss_1.jpg", world:"/assets/world/super-mario.png", games:['Super Princess Peach', 'Princess Peach: Showtime!','Mario Party Series' ]}}/>
+
+    </div>
+
+     <div className="characterCard">
+      <Character main ={{name: 'Incineroar', charImg:"https://www.smashbros.com/assets_v2/img/fighter/incineroar/ss_6.jpg", world: 'Pokemon',
+          games:['Pokémon Sun and Moon', 'Pokémon Sword and Shield','Pokémon Scarlet and Violet' ]
+        }}/>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+
+     <div className="characterCard">
+        <Character main ={{name: 'Corrin',
+        charImg:"https://www.smashbros.com/assets_v2/img/fighter/corrin/ss_4.jpg",
+        world: 'Fire Emblem',
+            games:['Fire Emblem Fates', 'Fire Emblem Heroes','Fire Emblem Warriors' ]
+          }}/>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
   )
 }
 
