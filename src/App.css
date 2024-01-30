@@ -5,26 +5,36 @@
   background-color: azure;
   text-align: center;
 }
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container{
+  display: flex;
+  flex-direction: row;
+  gap:20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
+div.characterCard{
+  width:500px;
   padding: 2em;
+  background-color: rgb(216, 216, 216);
+  color: black;
 }
 
+.character{
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+}
+
+.profileImg{
+  width:300px;
+}
+
+.universe>img{
+  width:100%;
+}
+
+li{
+  text-align: left;
+}
 .read-the-docs {
   color: #888;
 }

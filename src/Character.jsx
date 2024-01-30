@@ -3,9 +3,9 @@ const Character = (props) => {
   return ( 
     <>
     <div className="character">
-      <p>{props.main.name}</p>
       <img className="profileImg" src={`${props.main.charImg}`} />
-      <img src={`${props.main.world}`} />
+      <h2>{props.main.name}</h2>
+      <div className="universe"><img src={`${props.main.world}`} /></div>
       <ul>
       {games.map(game => <li key={game}>{game}</li>)}
       </ul>
